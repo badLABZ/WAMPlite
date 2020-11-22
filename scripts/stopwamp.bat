@@ -3,17 +3,18 @@ if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
 echo off
 
 :config
-title WAMPLite V2
-set script-title=WAMPLite V2
+title WAMPLite
 
 @echo off
 @echo,
 NET STOP wampapache64
 NET STOP wampmariadb64
+NET STOP wampmysqld64
 @echo,
+cls
 @echo ##################################################################
 @echo,
-@echo   ..... WAMP Started
+@echo   ..... WAMP Stopped!
 @echo,
 @echo ##################################################################
 @echo,
